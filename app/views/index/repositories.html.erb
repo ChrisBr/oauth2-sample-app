@@ -1,0 +1,10 @@
+<h1>Select your repository</h1>
+<%= form_tag(action: :create_webhook, method: "POST") do %>
+  <select name="repository_name">
+  <% @repository_names.each do |r| %>
+    <option value="<%= r %>"><%= r %></option>
+    <% end %>
+  </select>
+  <input type="submit" value="Submit">
+</form>
+<% end %>
